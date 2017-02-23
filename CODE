@@ -1,0 +1,60 @@
+#include <stdio.h>
+int main()
+{
+    unsigned long int i,j,k, n, t1 = 0, t2 = 1, nextTerm = 0,counter;
+    printf("\n Enter the number of terms: ");
+    scanf("%lu", &n);
+    printf("\n Fibonacci Series: ");
+
+    for (i = 1; i <= n; i++)
+    {
+
+        if(i == 1)
+        {
+printf("%lu",t1);
+continue;
+        }
+         if(i == 2)
+        {
+printf("\t %lu",t2);
+continue;
+        }
+ nextTerm = t1 + t2;
+        t1 = t2;
+        t2 = nextTerm;
+   for(j=1;j<nextTerm;j++)
+     {
+           counter=0;
+           for(k=2;k<nextTerm;k++)
+           {
+                 if(nextTerm%k==0)
+                 {
+                     counter=1;
+                       break;
+                 }}}
+if(nextTerm%3==0 && nextTerm!=3)
+            {
+                if(nextTerm%5==0)
+                {
+                printf("\t FizzBuzz");
+                }
+                else
+                {
+                    printf(" \t Buzz");
+                }}
+else if(nextTerm%5==0 && nextTerm!=5)
+                {
+                printf("\t Fizz");
+            }
+                 else if(counter==0)
+     {
+         printf("\t BuzzFizz");
+     }
+     else
+     {
+         printf("\t %lu ",nextTerm);
+     }
+     }
+         getch();   }
+
+
